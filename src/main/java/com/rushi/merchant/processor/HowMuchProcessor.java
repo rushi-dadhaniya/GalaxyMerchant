@@ -28,20 +28,26 @@ public class HowMuchProcessor implements QueryProcessor {
 						literalNotFound = true;
 						break;
 					}
+					
 					roman += romanValue;
 				}
 				if(!literalNotFound) {
-					int result = RomanNumberUtil.converToArabic(roman);
-					PrintQueue.getPrintQueue().add((formatted + " is " + (int)result));
+					Integer result = RomanNumberUtil.converToArabic(roman);
+					if(result != null) {
+						PrintQueue.getPrintQueue().add((formatted + " is " + result));
+					}
+					else {
+						PrintQueue.getPrintQueue().add(Messages.INVALID_INPUT.getMessage());
+					}
 				}
 			}
-			catch(Exception exception) {
-				PrintQueue.getPrintQueue().add((Messages.INVALID_INPUT.getMessage()));
+			catch(ArrayIndexOutOfBoundsException exception) {
+				PrintQueue.getPrintQueue().add((Messages.NO_IDEA.getMessage()));
 			}
 			
 		}
 		else {
-			PrintQueue.getPrintQueue().add((Messages.INVALID_INPUT.getMessage()));
+			PrintQueue.getPrintQueue().add((Messages.NO_IDEA.getMessage()));
 		}
 	}
 	

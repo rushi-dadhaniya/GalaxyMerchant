@@ -44,7 +44,7 @@ public class Application {
 				processor.process(line, romanLiterals, arabicLiterals);
 			}
 			else {
-				PrintQueue.getPrintQueue().add((Messages.NO_IDEA.getMessage()));
+				PrintQueue.getPrintQueue().add((Messages.INVALID_INPUT.getMessage()));
 			}
 		}
 		

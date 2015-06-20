@@ -8,7 +8,8 @@ public enum RomanNumbers {
 	L("L", 50),
 	C("C", 100),
 	D("D", 500),
-	M("M", 1000);
+	M("M", 1000),
+	Y("Y", 20);
 	
 	String roman;
 	Integer value;

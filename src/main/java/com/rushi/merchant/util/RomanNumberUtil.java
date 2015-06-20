@@ -1,6 +1,5 @@
 package com.rushi.merchant.util;
 
-import com.rushi.merchant.vo.Messages;
 import com.rushi.merchant.vo.RomanNumbers;
 
 public class RomanNumberUtil {
@@ -23,7 +22,6 @@ public class RomanNumberUtil {
 			return arabicValue;
 		}
 		else {
-			PrintQueue.getPrintQueue().add(Messages.INAVLID_ROMAN.getMessage());
 			return null;
 		}
 		
